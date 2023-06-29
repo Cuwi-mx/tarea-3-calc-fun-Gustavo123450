@@ -27,9 +27,9 @@
     
     <!--Botones de operaciones-->
     <button onclick="sumar()">sumar</button>
-    <button>restar</button>
-    <button>multiplicar</button>
-    <button>dividir</button>
+    <button onclick="restar()">restar</button>
+    <button onclick="multiplicar()">multiplicar</button>
+    <button onclick="dividir()">dividir</button>
 
     <br/>
     
@@ -74,7 +74,57 @@
 
 
         }
+        function restar(){
+         //Llamar a las etiquetas
+        input_num1 = document.getElementById("numero1");
+            input_num2 = document.getElementById("numero2");
 
+            numero1 = input_num1.value; //Valor de la etiqueta 1
+            numero1 = parseInt(numero1);
+
+            numero2 = input_num2.value; //Valor de la etiqueta 2
+            numero2 = parseInt(numero2);
+
+            let resultado = numero1 - numero2; //Calcular resultado
+
+            p_resultado = document.getElementById("resultado"); //Llamar etiqueta resultado
+            p_resultado.innerText = resultado; //Mostrar resultado
+
+        }
+        function multiplicar(){
+         //Llamar a las etiquetas
+         input_num1 = document.getElementById("numero1");
+            input_num2 = document.getElementById("numero2");
+
+            numero1 = input_num1.value; //Valor de la etiqueta 1
+            numero1 = parseInt(numero1);
+
+            numero2 = input_num2.value; //Valor de la etiqueta 2
+            numero2 = parseInt(numero2);
+
+            let resultado = numero1 * numero2; //Calcular resultado
+
+            p_resultado = document.getElementById("resultado"); //Llamar etiqueta resultado
+            p_resultado.innerText = resultado; //Mostrar resultado
+
+        }
+        function dividir(){
+             //Llamar a las etiquetas
+             input_num1 = document.getElementById("numero1");
+            input_num2 = document.getElementById("numero2");
+
+            numero1 = input_num1.value; //Valor de la etiqueta 1
+            numero1 = parseInt(numero1);
+
+            numero2 = input_num2.value; //Valor de la etiqueta 2
+            numero2 = parseInt(numero2);
+
+            let resultado = numero1 / numero2; //Calcular resultado
+
+            p_resultado = document.getElementById("resultado"); //Llamar etiqueta resultado
+            p_resultado.innerText = resultado; //Mostrar resultado
+
+        }
 
     </script>
 </body>
